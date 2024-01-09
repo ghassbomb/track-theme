@@ -49,28 +49,53 @@
 
 
 html {
-  font-size: 12pt;
+  font-size: 14px;
   scroll-behavior: smooth;
 }
 
 @media only screen and (min-width: 768px) {
   html {
-    font-size: 22px;
+    font-size: 20px;
+  }
+  body {
+    background-color: rgb(99, 98, 98);
+  }
+  .content {
+    margin-right: 5vw;
+    margin-left: 5vw;
+    box-shadow: 8.0px 16.0px 16.0px hsl(0deg 0% 0% / 0.25);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  html {
+    font-size: 23px;
+  }
+  .content {
+    margin-right: 10vw;
+    margin-left: 10vw;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  html {
+    font-size: 25px;
+  }
+  .content {
+    margin-right: 15vw;
+    margin-left: 15vw;
   }
 }
 
 body {
   font-family: 'Latin Modern', serif;
-  background-color: gray;
+  color: black;
 }
 
 .content {
   background-color: white;
-  margin-right: 15vw;
-  margin-left: 15vw;
   padding-left: 5vw;
   padding-right: 5vw;
-  box-shadow: 8.0px 16.0px 16.0px hsl(0deg 0% 0% / 0.25);
 }
 
 header {
