@@ -1,5 +1,5 @@
 title = 'Track Theme'
-baseURL = 'https://ghassbomb.github.io'
+baseURL = 'https://ghassbomb.github.io/books-track/'
 languageCode = 'en-us'
 description = "Track is the theme for my track sites. I use these sites as repository's of my progress in learning various subjects."
 enableRobotsTXT = true
