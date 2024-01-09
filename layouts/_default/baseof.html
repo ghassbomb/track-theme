@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="{{ .Site.Language }}">
+  <head>
+    <title>
+      {{ if .IsHome }}Home - {{ else }}{{ if .Page.Title }}{{ .Page.Title }} -
+      {{ end }}{{ end }}{{ .Site.Title }}
+    </title>
+    <link rel="canonical" href="{{ .Site.BaseURL }}" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    {{ with .Site.Params.favicon }}
+    <link rel="icon" href="{{ . }}" />
+    {{ end -}}
+    <meta name="author" content="{{ .Site.Author }}" />
+    <meta
+      name="description"
+      content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="index, follow" />
+    <meta charset="utf-8" />
+    <script src="/js/script.js"></script>
+  </head>
+  <body>
+    <div class="content">
+      <header>
+        <div class="left">
+          <h1><a href="/">{{.Site.Title}}</a></h1>
+        </div>
+        <div class="right">
+          <nav>
+            <a href="/books">Books</a> —
+            <a href="{{ .Site.Params.github }}">Github</a> —
+            <a href="https://ghassbomb.github.io/">My Site</a>
+          </nav>
+        </div>
+      </header>
+      <main>{{ block "main" . }} {{ .Content }} {{ end }}</main>
+      {{ partial "footer" }}
+    </div>
+  </body>
+</html>

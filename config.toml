@@ -1,0 +1,8 @@
+title = 'Track Theme'
+baseURL = 'https://ghassbomb.github.io'
+languageCode = 'en-us'
+author = 'Ghassan Shahzad'
+description = 'Track is the theme for my track sites. I use these sites as repository's of my progress in learning various subjects.'
+
+[params]
+github = 'https://github.com/ghassbomb/track-theme'
