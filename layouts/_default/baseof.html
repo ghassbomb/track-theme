@@ -6,16 +6,27 @@
       {{ end }}{{ end }}{{ .Site.Title }}
     </title>
     <link rel="canonical" href="{{ .Site.BaseURL }}" />
-    <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}/css/style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ .Site.BaseURL }}/css/style.css"
+    />
     <meta name="author" content="Ghassan Shahzad" />
     <meta
       name="description"
       content="{{ with site.Params.Description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}"
     />
-    <link rel="icon" href='{{ .Site.BaseURL }}/favicons/favicon.svg' />
+    <link rel="icon" href="{{ .Site.BaseURL }}/favicons/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="index, follow" />
     <meta charset="utf-8" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+
     <script src="{{ .Site.BaseURL }}/js/script.js"></script>
   </head>
   <body>
@@ -24,9 +35,7 @@
         <div class="left">
           <h1><a href="{{ .Site.BaseURL }}">{{.Site.Title}}</a></h1>
         </div>
-        <div class="right">
-          {{ partial "nav" }}
-        </div>
+        <div class="right">{{ partial "nav" }}</div>
       </header>
       <main>{{ block "main" . }} {{ .Content }} {{ end }}</main>
       {{ partial "footer" }}
