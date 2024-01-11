@@ -6,3 +6,11 @@ enableRobotsTXT = true
 
 [params]
 github = 'https://github.com/ghassbomb/track-theme'
+
+[markup.goldmark.renderer] 
+unsafe = true
+
+[markup]
+  [markup.tableOfContents]
+    startLevel = 3
+    endLevel = 6
