@@ -20,6 +20,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="index, follow" />
     <meta charset="utf-8" />
+    {{ if .Params.mathjax }}
     <script
       type="text/javascript"
       src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
@@ -45,6 +46,7 @@
       });
     </script>
     <script src="{{ .Site.BaseURL }}/js/script.js"></script>
+    {{ end }}
   </head>
   <body>
     <div class="content">

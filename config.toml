@@ -6,6 +6,7 @@ enableRobotsTXT = true
 
 [params]
 github = 'https://github.com/ghassbomb/track-theme'
+mathjax = true
 
 [markup.goldmark.renderer] 
 unsafe = true
@@ -14,3 +15,4 @@ unsafe = true
   [markup.tableOfContents]
     startLevel = 3
     endLevel = 6
+
